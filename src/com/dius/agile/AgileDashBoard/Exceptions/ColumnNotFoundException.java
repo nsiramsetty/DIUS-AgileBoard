@@ -1,8 +1,9 @@
+/**
+ * Created by Naresh Siramsetty on 5/5/17.
+ */
+
 package com.dius.agile.AgileDashBoard.Exceptions;
 
-/**
- * Created by nsiramsetty on 5/5/17.
- */
 public class ColumnNotFoundException extends Exception {
 
     public String getColumnName() {
@@ -21,6 +22,7 @@ public class ColumnNotFoundException extends Exception {
 
     @Override
     public void printStackTrace() {
-        System.out.println("Column with name \""+columnName+"\" not found in the agile board.");
+        System.out.println("Column with name \""
+                + columnName + "\" not found in the agile board.");
     }
 }

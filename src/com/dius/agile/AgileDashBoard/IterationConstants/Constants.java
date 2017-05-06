@@ -1,7 +1,7 @@
 package com.dius.agile.AgileDashBoard.IterationConstants;
 
 /**
- * Created by nsiramsetty on 5/5/17.
+ * Created by Naresh Siramsetty on 5/5/17.
  */
 public class Constants {
 
@@ -19,6 +19,6 @@ public class Constants {
 
     public static final String CARD_NOT_FOUND="Card Not Found";
 
-    public static final Integer WIP_LIMIT=50;
+    public static final Integer WIP_LIMIT=100;
 
 }

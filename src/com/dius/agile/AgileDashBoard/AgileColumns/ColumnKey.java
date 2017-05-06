@@ -1,8 +1,9 @@
+/**
+ * Created by Naresh Siramsetty on 5/5/17.
+ */
+
 package com.dius.agile.AgileDashBoard.AgileColumns;
 
-/**
- * Created by nsiramsetty on 5/5/17.
- */
 public class ColumnKey {
     private String columnName;
 

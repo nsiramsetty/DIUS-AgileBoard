@@ -1,7 +1,7 @@
 package com.dius.agile.AgileDashBoard.AgileCardItem;
 
 /**
- * Created by nsiramsetty on 5/5/17.
+ * Created by Naresh Siramsetty on 5/5/17.
  */
 public class CardItem {
 
@@ -27,8 +27,10 @@ public class CardItem {
 
     private Integer cardEstimate;
 
-    public CardItem(String cardTitle) {
+    public CardItem(String cardTitle,String cardDescription, Integer cardEstimate) {
         this.cardTitle = cardTitle;
+        this.cardDescription = cardDescription;
+        this.cardEstimate = cardEstimate;
     }
 
     public String getCardTitle() {

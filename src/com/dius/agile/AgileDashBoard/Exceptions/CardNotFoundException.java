@@ -1,14 +1,16 @@
+/**
+ * Created by Naresh Siramsetty on 5/5/17.
+ */
+
 package com.dius.agile.AgileDashBoard.Exceptions;
 
 import com.dius.agile.AgileDashBoard.AgileCardItem.CardItem;
 
-/**
- * Created by nsiramsetty on 5/5/17.
- */
-public class CardNotFoundException extends Exception{
+public class CardNotFoundException extends Exception {
 
-    public CardNotFoundException(CardItem cardItem) {
+    public CardNotFoundException(CardItem cardItem, String columnName) {
         this.cardItem = cardItem;
+        this.columnName = columnName;
     }
 
     public CardItem getCardItem() {
@@ -21,8 +23,19 @@ public class CardNotFoundException extends Exception{
 
     private CardItem cardItem;
 
+    public String getColumnName() {
+        return columnName;
+    }
+
+    public void setColumnName(String columnName) {
+        this.columnName = columnName;
+    }
+
+    private String columnName;
+
     @Override
     public void printStackTrace() {
-        System.out.println("Card Item with Title \""+cardItem.getCardTitle()+"\" not found in this column.");
+        System.out.println("Card Item with Title \"" +
+                cardItem.getCardTitle() + "\" not found in this column \"" + columnName + "\"");
     }
 }

@@ -1,7 +1,7 @@
 package com.dius.agile.AgileDashBoard.AgileCardItem;
 
 /**
- * Created by nsiramsetty on 5/5/17.
+ * Created by Naresh Siramsetty on 5/5/17.
  */
 public class CardItemContent {
 

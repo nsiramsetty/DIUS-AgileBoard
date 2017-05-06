@@ -1,3 +1,7 @@
+/**
+ * Created by Naresh Siramsetty on 5/5/17.
+ */
+
 package com.dius.agile.AgileDashBoard.AgileColumns;
 
 import com.dius.agile.AgileDashBoard.AgileCardItem.CardItem;
@@ -12,18 +16,15 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 
-/**
- * Created by nsiramsetty on 5/5/17.
- */
 public class ColumnCardsMap {
-    private HashMap<CardItemKey,CardItemContent> columnCardMap;
+    private HashMap<CardItemKey, CardItemContent> columnCardMap;
 
     public ColumnCardsMap(HashMap<CardItemKey, CardItemContent> columnCardMap) {
         this.columnCardMap = columnCardMap;
     }
 
     public ColumnCardsMap() {
-        this.columnCardMap = new HashMap<>();
+        this.columnCardMap = new HashMap<CardItemKey, CardItemContent>();
     }
 
     public HashMap<CardItemKey, CardItemContent> getColumnCardMap() {
@@ -34,37 +35,26 @@ public class ColumnCardsMap {
         this.columnCardMap = columnCardMap;
     }
 
-    public void addCardItem(CardItem cardItem) throws CardAlreadyExistsException,WIPExceededException{
-        CardItemKey cardItemKey=new CardItemKey(cardItem.getCardTitle());
-        if(columnCardMap.containsKey(cardItemKey)){
-            throw new CardAlreadyExistsException(cardItem);
-        }else{
-            Integer iterationPointsCount = getIterationPointsCount()+cardItem.getCardEstimate();
-            if(iterationPointsCount > Constants.WIP_LIMIT){
-                throw new WIPExceededException(cardItem,iterationPointsCount);
-            }else{
-                CardItemContent cardItemContent=new CardItemContent(cardItem.getCardDescription(),cardItem.getCardEstimate());
-                columnCardMap.put(cardItemKey,cardItemContent);
-            }
-        }
-    }
-
-    public void removeCardItem(CardItem cardItem) throws CardNotFoundException{
-        CardItemKey cardItemKey=new CardItemKey(cardItem.getCardTitle());
-        if(!columnCardMap.containsKey(cardItemKey)){
-            throw new CardNotFoundException(cardItem);
-        }else{
-            columnCardMap.remove(cardItemKey);
-        }
-    }
-
-    public Integer getIterationPointsCount(){
+    public Integer getColumnEstimate() {
         Set<CardItemKey> cardItemKeySet = columnCardMap.keySet();
-        Iterator<CardItemKey> cardItemKeyIterator=cardItemKeySet.iterator();
-        Integer iterationPointsCount=0;
-        while(cardItemKeyIterator.hasNext()){
-            iterationPointsCount+=columnCardMap.get(cardItemKeyIterator.next()).getCardEstimate();
+        Iterator<CardItemKey> cardItemKeyIterator = cardItemKeySet.iterator();
+        Integer iterationPointsCount = 0;
+        while (cardItemKeyIterator.hasNext()) {
+            iterationPointsCount += columnCardMap.get(cardItemKeyIterator.next()).getCardEstimate();
         }
         return iterationPointsCount;
+    }
+
+    public void printColumnCards(){
+        Set<CardItemKey> cardItemKeySet = columnCardMap.keySet();
+        Iterator<CardItemKey> cardItemKeyIterator = cardItemKeySet.iterator();
+        while (cardItemKeyIterator.hasNext()) {
+            CardItemKey cardItemKey=cardItemKeyIterator.next();
+            CardItemContent cardItemContent=columnCardMap.get(cardItemKey);
+            System.out.print("\t");
+            System.out.println("Card Item -> Title : " +cardItemKey.getCardTitle()+
+                    " -> Description : "+cardItemContent.getCardDescription()+
+                    " -> Estimate : "+cardItemContent.getCardEstimate());
+        }
     }
 }

@@ -1,16 +1,17 @@
+/**
+ * Created by Naresh Siramsetty on 5/5/17.
+ */
+
 package com.dius.agile.AgileDashBoard.AgileIteration;
 
 import com.dius.agile.AgileDashBoard.AgileBoard.Board;
 import com.dius.agile.AgileDashBoard.AgileCardItem.CardItem;
 import com.dius.agile.AgileDashBoard.Exceptions.CardAlreadyExistsException;
-import com.dius.agile.AgileDashBoard.Exceptions.CardNotFoundException;
 import com.dius.agile.AgileDashBoard.Exceptions.ColumnNotFoundException;
 import com.dius.agile.AgileDashBoard.Exceptions.WIPExceededException;
+import com.dius.agile.AgileDashBoard.IterationConstants.Constants;
 import com.dius.agile.AgileDashBoard.LastAction.Action;
 
-/**
- * Created by nsiramsetty on 5/5/17.
- */
 public class Iteration {
     public Board getAgileBoard() {
         return agileBoard;
@@ -20,13 +21,6 @@ public class Iteration {
         this.agileBoard = agileBoard;
     }
 
-    public Action getLastAddAction() {
-        return lastAddAction;
-    }
-
-    public void setLastAddAction(Action lastAddAction) {
-        this.lastAddAction = lastAddAction;
-    }
 
     public Action getLastMoveAction() {
         return lastMoveAction;
@@ -36,30 +30,37 @@ public class Iteration {
         this.lastMoveAction = lastMoveAction;
     }
 
-    public Action getLastRemoveAction() {
-        return lastRemoveAction;
-    }
-
-    public void setLastRemoveAction(Action lastRemoveAction) {
-        this.lastRemoveAction = lastRemoveAction;
-    }
 
     private Board agileBoard;
 
-    private Action lastAddAction;
-
     private Action lastMoveAction;
-
-    private Action lastRemoveAction;
 
     public Iteration(Board agileBoard) {
         this.agileBoard = agileBoard;
-        this.lastAddAction=new Action();
-        this.lastMoveAction=new Action();
-        this.lastRemoveAction=new Action();
+        this.lastMoveAction = new Action();
     }
 
-    public void add(CardItem cardItem, String columnName) throws ColumnNotFoundException,CardAlreadyExistsException,WIPExceededException{
-        getAgileBoard().getColumnCardsMapByColumnKey(columnName).addCardItem(cardItem);
+    public void addCardItem(CardItem cardItem, String columnName)  {
+        try{
+            if(getAgileBoard().canAddCardItem(cardItem,columnName)){
+                getAgileBoard().addCardItem(cardItem,columnName);
+            }
+        }catch(ColumnNotFoundException cnfException){
+            cnfException.printStackTrace();
+        }
+        catch(CardAlreadyExistsException caeException){
+            caeException.printStackTrace();
+        }
+        catch(WIPExceededException wipException){
+            wipException.printStackTrace();
+        }
+    }
+
+    public void add(CardItem cardItem){
+        addCardItem(cardItem,Constants.COLUMN_NAME_NEW);
+    }
+
+    public void print(){
+        agileBoard.printBoard();
     }
 }
