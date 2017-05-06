@@ -21,6 +21,6 @@ public class ColumnNotFoundException extends Exception {
 
     @Override
     public void printStackTrace() {
-        System.out.println("Column with name \""+columnName+"\" already exists in the agile board.");
+        System.out.println("Column with name \""+columnName+"\" not found in the agile board.");
     }
 }

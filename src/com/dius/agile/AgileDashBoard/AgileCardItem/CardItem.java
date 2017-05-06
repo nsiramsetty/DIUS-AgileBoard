@@ -17,15 +17,15 @@ public class CardItem {
 
     private String cardDescription;
 
-    public String getCardEstimate() {
+    public Integer getCardEstimate() {
         return cardEstimate;
     }
 
-    public void setCardEstimate(String cardEstimate) {
+    public void setCardEstimate(Integer cardEstimate) {
         this.cardEstimate = cardEstimate;
     }
 
-    private String cardEstimate;
+    private Integer cardEstimate;
 
     public CardItem(String cardTitle) {
         this.cardTitle = cardTitle;
