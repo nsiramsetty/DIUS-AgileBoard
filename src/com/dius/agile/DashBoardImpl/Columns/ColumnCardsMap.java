@@ -2,10 +2,10 @@
  * Created by Naresh Siramsetty on 5/5/17.
  */
 
-package com.dius.agile.DashBoard.Columns;
+package com.dius.agile.DashBoardImpl.Columns;
 
-import com.dius.agile.DashBoard.CardItem.CardItemContent;
-import com.dius.agile.DashBoard.CardItem.CardItemKey;
+import com.dius.agile.DashBoardImpl.CardItem.CardItemContent;
+import com.dius.agile.DashBoardImpl.CardItem.CardItemKey;
 
 import java.util.HashMap;
 import java.util.Iterator;

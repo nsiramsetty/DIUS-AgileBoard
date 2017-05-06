@@ -2,12 +2,12 @@
  * Created by Naresh Siramsetty on 5/5/17.
  */
 
-package com.dius.agile.DashBoard;
+package com.dius.agile.DashBoardImpl;
 
-import com.dius.agile.DashBoard.Board.Board;
-import com.dius.agile.DashBoard.CardItem.CardItem;
-import com.dius.agile.DashBoard.Iteration.Iteration;
-import com.dius.agile.DashBoard.Constants.Constants;
+import com.dius.agile.DashBoardImpl.Board.Board;
+import com.dius.agile.DashBoardImpl.CardItem.CardItem;
+import com.dius.agile.DashBoardImpl.Iteration.Iteration;
+import com.dius.agile.DashBoardImpl.Constants.Constants;
 
 public class AgileDashBoardLauncher {
 

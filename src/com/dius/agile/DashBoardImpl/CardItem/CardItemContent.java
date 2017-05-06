@@ -2,7 +2,7 @@
  * Created by Naresh Siramsetty on 5/5/17.
  */
 
-package com.dius.agile.DashBoard.CardItem;
+package com.dius.agile.DashBoardImpl.CardItem;
 
 public class CardItemContent {
 

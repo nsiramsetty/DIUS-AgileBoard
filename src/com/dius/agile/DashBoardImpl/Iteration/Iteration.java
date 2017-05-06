@@ -2,18 +2,19 @@
  * Created by Naresh Siramsetty on 5/5/17.
  */
 
-package com.dius.agile.DashBoard.Iteration;
+package com.dius.agile.DashBoardImpl.Iteration;
 
-import com.dius.agile.DashBoard.Action.Action;
-import com.dius.agile.DashBoard.Board.Board;
-import com.dius.agile.DashBoard.CardItem.CardItem;
-import com.dius.agile.DashBoard.Constants.Constants;
-import com.dius.agile.DashBoard.Exceptions.CardAlreadyExistsException;
-import com.dius.agile.DashBoard.Exceptions.CardNotFoundException;
-import com.dius.agile.DashBoard.Exceptions.ColumnNotFoundException;
-import com.dius.agile.DashBoard.Exceptions.WIPExceededException;
+import com.dius.agile.DashBoardImpl.Action.Action;
+import com.dius.agile.DashBoardImpl.Board.Board;
+import com.dius.agile.DashBoardImpl.CardItem.CardItem;
+import com.dius.agile.DashBoardImpl.Constants.Constants;
+import com.dius.agile.DashBoardImpl.Exceptions.CardAlreadyExistsException;
+import com.dius.agile.DashBoardImpl.Exceptions.CardNotFoundException;
+import com.dius.agile.DashBoardImpl.Exceptions.ColumnNotFoundException;
+import com.dius.agile.DashBoardImpl.Exceptions.WIPExceededException;
+import com.dius.agile.DashBoardInterface.IterationInterface;
 
-public class Iteration {
+public class Iteration implements IterationInterface{
     private Board agileBoard;
     private Action lastMoveAction;
 

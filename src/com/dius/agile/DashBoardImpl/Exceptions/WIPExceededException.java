@@ -2,10 +2,10 @@
  * Created by Naresh Siramsetty on 5/5/17.
  */
 
-package com.dius.agile.DashBoard.Exceptions;
+package com.dius.agile.DashBoardImpl.Exceptions;
 
-import com.dius.agile.DashBoard.CardItem.CardItem;
-import com.dius.agile.DashBoard.Constants.Constants;
+import com.dius.agile.DashBoardImpl.CardItem.CardItem;
+import com.dius.agile.DashBoardImpl.Constants.Constants;
 
 public class WIPExceededException extends Exception {
 

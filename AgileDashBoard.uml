@@ -3,112 +3,153 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="56.25" y="334.0">com.dius.agile.DashBoard.Columns.ColumnCardsMap</node>
-    <node x="654.25" y="610.0">com.dius.agile.DashBoard.Board.Board</node>
-    <node x="847.25" y="345.0">com.dius.agile.DashBoard.Exceptions.ColumnAlreadyExistException</node>
-    <node x="342.0" y="11.0">com.dius.agile.DashBoard.CardItem.CardItemContent</node>
-    <node x="0.0" y="1273.0">com.dius.agile.DashBoard.Constants.Constants</node>
-    <node x="0.0" y="44.0">com.dius.agile.DashBoard.CardItem.CardItemKey</node>
-    <node x="589.25" y="345.0">com.dius.agile.DashBoard.Exceptions.ColumnNotFoundException</node>
-    <node x="2084.105113636364" y="911.0">com.dius.agile.DashBoard.Iteration.Iteration</node>
-    <node x="1105.25" y="334.0">com.dius.agile.DashBoard.Columns.ColumnKey</node>
-    <node x="2073.25" y="312.0">com.dius.agile.DashBoard.Exceptions.CardAlreadyExistsException</node>
-    <node x="370.0" y="1273.0">com.dius.agile.DashBoard.AgileDashBoardLauncher</node>
-    <node x="1383.25" y="312.0">com.dius.agile.DashBoard.Exceptions.CardNotFoundException</node>
-    <node x="1693.25" y="279.0">com.dius.agile.DashBoard.Exceptions.WIPExceededException</node>
-    <node x="2208.75" y="621.0">com.dius.agile.DashBoard.Action.Action</node>
-    <node x="1925.1960227272725" y="0.0">com.dius.agile.DashBoard.CardItem.CardItem</node>
+    <node x="443.75" y="191.0">com.dius.agile.DashBoardImpl.Exceptions.ColumnAlreadyExistException</node>
+    <node x="141.5" y="180.0">com.dius.agile.DashBoardImpl.Columns.ColumnCardsMap</node>
+    <node x="575.25" y="368.0">com.dius.agile.DashBoardImpl.Board.Board</node>
+    <node x="1697.75" y="180.0">com.dius.agile.DashBoardImpl.Exceptions.CardAlreadyExistsException</node>
+    <node x="1663.5" y="625.0">com.dius.agile.DashBoardImpl.Iteration.Iteration</node>
+    <node x="1175.75" y="180.0">com.dius.agile.DashBoardImpl.Exceptions.CardNotFoundException</node>
+    <node x="1822.75" y="423.5">com.dius.agile.DashBoardImpl.Action.Action</node>
+    <node x="1786.0" y="904.0">com.dius.agile.DashBoardImpl.AgileDashBoardLauncher</node>
+    <node x="686.75" y="180.0">com.dius.agile.DashBoardImpl.Columns.ColumnKey</node>
+    <node x="944.75" y="191.0">com.dius.agile.DashBoardImpl.Exceptions.ColumnNotFoundException</node>
+    <node x="1728.064935064935" y="11.5">com.dius.agile.DashBoardImpl.CardItem.CardItem</node>
+    <node x="0.0" y="0.0">com.dius.agile.DashBoardImpl.CardItem.CardItemContent</node>
+    <node x="1426.75" y="169.0">com.dius.agile.DashBoardImpl.Exceptions.WIPExceededException</node>
+    <node x="0.0" y="1001.0">com.dius.agile.DashBoardImpl.Constants.Constants</node>
+    <node x="278.0" y="11.0">com.dius.agile.DashBoardImpl.CardItem.CardItemKey</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="com.dius.agile.DashBoard.Exceptions.WIPExceededException" target="com.dius.agile.DashBoard.CardItem.CardItem">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+    <edge source="com.dius.agile.DashBoardImpl.Exceptions.CardNotFoundException" target="com.dius.agile.DashBoardImpl.CardItem.CardItem">
+      <point x="0.0" y="-48.5" />
+      <point x="1291.25" y="139.0" />
+      <point x="1747.064935064935" y="139.0" />
+      <point x="-76.0" y="48.0" />
     </edge>
-    <edge source="com.dius.agile.DashBoard.Exceptions.CardNotFoundException" target="com.dius.agile.DashBoard.CardItem.CardItem">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+    <edge source="com.dius.agile.DashBoardImpl.Board.Board" target="com.dius.agile.DashBoardImpl.Exceptions.CardAlreadyExistsException">
+      <point x="155.4545454545455" y="-103.5" />
+      <point x="901.7045454545455" y="348.0" />
+      <point x="1813.25" y="348.0" />
+      <point x="0.0" y="48.5" />
     </edge>
-    <edge source="com.dius.agile.DashBoard.Board.Board" target="com.dius.agile.DashBoard.Columns.ColumnKey">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+    <edge source="com.dius.agile.DashBoardImpl.Columns.ColumnCardsMap" target="com.dius.agile.DashBoardImpl.CardItem.CardItemContent">
+      <point x="-62.0" y="-48.5" />
+      <point x="203.5" y="149.0" />
+      <point x="193.5" y="149.0" />
+      <point x="64.5" y="59.5" />
     </edge>
-    <edge source="com.dius.agile.DashBoard.Exceptions.CardAlreadyExistsException" target="com.dius.agile.DashBoard.CardItem.CardItem">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+    <edge source="com.dius.agile.DashBoardImpl.Board.Board" target="com.dius.agile.DashBoardImpl.Columns.ColumnKey">
+      <point x="31.090909090909122" y="-103.5" />
+      <point x="777.3409090909091" y="308.0" />
+      <point x="865.25" y="308.0" />
+      <point x="59.5" y="48.5" />
     </edge>
-    <edge source="com.dius.agile.DashBoard.Columns.ColumnCardsMap" target="com.dius.agile.DashBoard.CardItem.CardItemKey">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+    <edge source="com.dius.agile.DashBoardImpl.Board.Board" target="com.dius.agile.DashBoardImpl.Exceptions.WIPExceededException">
+      <point x="124.36363636363637" y="-103.5" />
+      <point x="870.6136363636364" y="338.0" />
+      <point x="1552.25" y="338.0" />
+      <point x="0.0" y="59.5" />
     </edge>
-    <edge source="com.dius.agile.DashBoard.Iteration.Iteration" target="com.dius.agile.DashBoard.Action.Action">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+    <edge source="com.dius.agile.DashBoardImpl.Board.Board" target="com.dius.agile.DashBoardImpl.CardItem.CardItemContent">
+      <point x="-155.45454545454538" y="-103.5" />
+      <point x="590.7954545454546" y="348.0" />
+      <point x="92.75" y="348.0" />
+      <point x="92.75" y="149.0" />
+      <point x="64.5" y="149.0" />
+      <point x="-64.5" y="59.5" />
     </edge>
-    <edge source="com.dius.agile.DashBoard.AgileDashBoardLauncher" target="com.dius.agile.DashBoard.Iteration.Iteration">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+    <edge source="com.dius.agile.DashBoardImpl.Board.Board" target="com.dius.agile.DashBoardImpl.CardItem.CardItemKey">
+      <point x="-62.181818181818244" y="-103.5" />
+      <point x="684.0681818181818" y="318.0" />
+      <point x="433.25" y="318.0" />
+      <point x="433.25" y="149.0" />
+      <point x="456.5" y="149.0" />
+      <point x="59.5" y="48.5" />
     </edge>
-    <edge source="com.dius.agile.DashBoard.Action.Action" target="com.dius.agile.DashBoard.CardItem.CardItem">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+    <edge source="com.dius.agile.DashBoardImpl.Action.Action" target="com.dius.agile.DashBoardImpl.CardItem.CardItem">
+      <point x="0.0" y="-48.0" />
+      <point x="1939.25" y="149.0" />
+      <point x="1861.064935064935" y="149.0" />
+      <point x="38.0" y="48.0" />
     </edge>
-    <edge source="com.dius.agile.DashBoard.Columns.ColumnCardsMap" target="com.dius.agile.DashBoard.CardItem.CardItemContent">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+    <edge source="com.dius.agile.DashBoardImpl.Exceptions.CardAlreadyExistsException" target="com.dius.agile.DashBoardImpl.CardItem.CardItem">
+      <point x="0.0" y="-48.5" />
+      <point x="1813.25" y="149.0" />
+      <point x="1823.064935064935" y="149.0" />
+      <point x="0.0" y="48.0" />
     </edge>
-    <edge source="com.dius.agile.DashBoard.Board.Board" target="com.dius.agile.DashBoard.Exceptions.CardAlreadyExistsException">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+    <edge source="com.dius.agile.DashBoardImpl.AgileDashBoardLauncher" target="com.dius.agile.DashBoardImpl.Board.Board">
+      <point x="-63.33333333333337" y="-26.0" />
+      <point x="1817.6666666666665" y="879.0" />
+      <point x="660.75" y="879.0" />
+      <point x="-85.5" y="103.5" />
     </edge>
-    <edge source="com.dius.agile.DashBoard.Board.Board" target="com.dius.agile.DashBoard.CardItem.CardItemContent">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+    <edge source="com.dius.agile.DashBoardImpl.Iteration.Iteration" target="com.dius.agile.DashBoardImpl.Action.Action">
+      <point x="0.0" y="-114.5" />
+      <point x="-58.25" y="48.0" />
     </edge>
-    <edge source="com.dius.agile.DashBoard.Iteration.Iteration" target="com.dius.agile.DashBoard.Board.Board">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+    <edge source="com.dius.agile.DashBoardImpl.AgileDashBoardLauncher" target="com.dius.agile.DashBoardImpl.Iteration.Iteration">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="114.5" />
     </edge>
-    <edge source="com.dius.agile.DashBoard.Board.Board" target="com.dius.agile.DashBoard.Columns.ColumnCardsMap">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+    <edge source="com.dius.agile.DashBoardImpl.Board.Board" target="com.dius.agile.DashBoardImpl.Exceptions.ColumnNotFoundException">
+      <point x="62.181818181818244" y="-103.5" />
+      <point x="808.4318181818182" y="318.0" />
+      <point x="1050.25" y="318.0" />
+      <point x="0.0" y="37.5" />
     </edge>
-    <edge source="com.dius.agile.DashBoard.AgileDashBoardLauncher" target="com.dius.agile.DashBoard.CardItem.CardItem">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+    <edge source="com.dius.agile.DashBoardImpl.Exceptions.WIPExceededException" target="com.dius.agile.DashBoardImpl.CardItem.CardItem">
+      <point x="0.0" y="-59.5" />
+      <point x="1552.25" y="149.0" />
+      <point x="1785.064935064935" y="149.0" />
+      <point x="-38.0" y="48.0" />
     </edge>
-    <edge source="com.dius.agile.DashBoard.Board.Board" target="com.dius.agile.DashBoard.Exceptions.ColumnAlreadyExistException">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+    <edge source="com.dius.agile.DashBoardImpl.AgileDashBoardLauncher" target="com.dius.agile.DashBoardImpl.CardItem.CardItem">
+      <point x="63.33333333333337" y="-26.0" />
+      <point x="1944.3333333333335" y="879.0" />
+      <point x="2109.0" y="879.0" />
+      <point x="2109.0" y="139.0" />
+      <point x="1899.064935064935" y="139.0" />
+      <point x="76.0" y="48.0" />
     </edge>
-    <edge source="com.dius.agile.DashBoard.Board.Board" target="com.dius.agile.DashBoard.Exceptions.WIPExceededException">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+    <edge source="com.dius.agile.DashBoardImpl.Board.Board" target="com.dius.agile.DashBoardImpl.Columns.ColumnCardsMap">
+      <point x="-124.36363636363626" y="-103.5" />
+      <point x="621.8863636363637" y="338.0" />
+      <point x="203.5" y="338.0" />
+      <point x="-62.0" y="48.5" />
     </edge>
-    <edge source="com.dius.agile.DashBoard.Board.Board" target="com.dius.agile.DashBoard.Exceptions.CardNotFoundException">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+    <edge source="com.dius.agile.DashBoardImpl.Board.Board" target="com.dius.agile.DashBoardImpl.Exceptions.ColumnAlreadyExistException">
+      <point x="-31.090909090909122" y="-103.5" />
+      <point x="715.1590909090909" y="308.0" />
+      <point x="555.25" y="308.0" />
+      <point x="0.0" y="37.5" />
     </edge>
-    <edge source="com.dius.agile.DashBoard.Board.Board" target="com.dius.agile.DashBoard.CardItem.CardItemKey">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+    <edge source="com.dius.agile.DashBoardImpl.Board.Board" target="com.dius.agile.DashBoardImpl.Exceptions.CardNotFoundException">
+      <point x="93.27272727272725" y="-103.5" />
+      <point x="839.5227272727273" y="328.0" />
+      <point x="1291.25" y="328.0" />
+      <point x="0.0" y="48.5" />
     </edge>
-    <edge source="com.dius.agile.DashBoard.AgileDashBoardLauncher" target="com.dius.agile.DashBoard.Board.Board">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+    <edge source="com.dius.agile.DashBoardImpl.Columns.ColumnCardsMap" target="com.dius.agile.DashBoardImpl.CardItem.CardItemKey">
+      <point x="62.0" y="-48.5" />
+      <point x="327.5" y="149.0" />
+      <point x="337.5" y="149.0" />
+      <point x="-59.5" y="48.5" />
     </edge>
-    <edge source="com.dius.agile.DashBoard.Board.Board" target="com.dius.agile.DashBoard.Exceptions.ColumnNotFoundException">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+    <edge source="com.dius.agile.DashBoardImpl.Iteration.Iteration" target="com.dius.agile.DashBoardImpl.Board.Board">
+      <point x="-145.0" y="-114.5" />
+      <point x="1736.0" y="600.0" />
+      <point x="831.75" y="600.0" />
+      <point x="85.5" y="103.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.4271199687377882" x="1269.5" y="708.9103385178408" />
-  <SelectedNodes>
-    <node>com.dius.agile.DashBoard.AgileDashBoardLauncher</node>
-  </SelectedNodes>
+  <settings layout="Hierarchic Group" zoom="0.34688796680497924" x="1068.4366028708134" y="472.5" />
+  <SelectedNodes />
   <Categories>
     <Category>Fields</Category>
     <Category>Methods</Category>
+    <Category>Properties</Category>
   </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>

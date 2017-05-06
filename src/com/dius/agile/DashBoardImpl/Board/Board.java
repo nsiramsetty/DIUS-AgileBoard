@@ -2,15 +2,15 @@
  * Created by Naresh Siramsetty on 5/5/17.
  */
 
-package com.dius.agile.DashBoard.Board;
+package com.dius.agile.DashBoardImpl.Board;
 
-import com.dius.agile.DashBoard.CardItem.CardItem;
-import com.dius.agile.DashBoard.CardItem.CardItemContent;
-import com.dius.agile.DashBoard.CardItem.CardItemKey;
-import com.dius.agile.DashBoard.Columns.ColumnCardsMap;
-import com.dius.agile.DashBoard.Columns.ColumnKey;
-import com.dius.agile.DashBoard.Exceptions.*;
-import com.dius.agile.DashBoard.Constants.Constants;
+import com.dius.agile.DashBoardImpl.CardItem.CardItem;
+import com.dius.agile.DashBoardImpl.CardItem.CardItemContent;
+import com.dius.agile.DashBoardImpl.CardItem.CardItemKey;
+import com.dius.agile.DashBoardImpl.Columns.ColumnCardsMap;
+import com.dius.agile.DashBoardImpl.Columns.ColumnKey;
+import com.dius.agile.DashBoardImpl.Exceptions.*;
+import com.dius.agile.DashBoardImpl.Constants.Constants;
 
 import java.util.HashMap;
 import java.util.Iterator;

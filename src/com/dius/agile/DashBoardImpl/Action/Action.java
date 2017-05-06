@@ -2,9 +2,9 @@
  * Created by Naresh Siramsetty on 5/5/17.
  */
 
-package com.dius.agile.DashBoard.Action;
+package com.dius.agile.DashBoardImpl.Action;
 
-import com.dius.agile.DashBoard.CardItem.CardItem;
+import com.dius.agile.DashBoardImpl.CardItem.CardItem;
 
 public class Action {
     private CardItem cardItem;

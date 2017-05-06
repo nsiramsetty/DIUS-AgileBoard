@@ -2,7 +2,7 @@
  * Created by Naresh Siramsetty on 5/5/17.
  */
 
-package com.dius.agile.DashBoard.Exceptions;
+package com.dius.agile.DashBoardImpl.Exceptions;
 
 public class ColumnAlreadyExistException extends Exception {
 
