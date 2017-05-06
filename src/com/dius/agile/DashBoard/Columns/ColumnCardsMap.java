@@ -2,15 +2,10 @@
  * Created by Naresh Siramsetty on 5/5/17.
  */
 
-package com.dius.agile.AgileDashBoard.AgileColumns;
+package com.dius.agile.DashBoard.Columns;
 
-import com.dius.agile.AgileDashBoard.AgileCardItem.CardItem;
-import com.dius.agile.AgileDashBoard.AgileCardItem.CardItemContent;
-import com.dius.agile.AgileDashBoard.AgileCardItem.CardItemKey;
-import com.dius.agile.AgileDashBoard.Exceptions.CardAlreadyExistsException;
-import com.dius.agile.AgileDashBoard.Exceptions.CardNotFoundException;
-import com.dius.agile.AgileDashBoard.Exceptions.WIPExceededException;
-import com.dius.agile.AgileDashBoard.IterationConstants.Constants;
+import com.dius.agile.DashBoard.CardItem.CardItemContent;
+import com.dius.agile.DashBoard.CardItem.CardItemKey;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -45,16 +40,16 @@ public class ColumnCardsMap {
         return iterationPointsCount;
     }
 
-    public void printColumnCards(){
+    public void printColumnCards() {
         Set<CardItemKey> cardItemKeySet = columnCardMap.keySet();
         Iterator<CardItemKey> cardItemKeyIterator = cardItemKeySet.iterator();
         while (cardItemKeyIterator.hasNext()) {
-            CardItemKey cardItemKey=cardItemKeyIterator.next();
-            CardItemContent cardItemContent=columnCardMap.get(cardItemKey);
+            CardItemKey cardItemKey = cardItemKeyIterator.next();
+            CardItemContent cardItemContent = columnCardMap.get(cardItemKey);
             System.out.print("\t");
-            System.out.println("Card Item -> Title : " +cardItemKey.getCardTitle()+
-                    " -> Description : "+cardItemContent.getCardDescription()+
-                    " -> Estimate : "+cardItemContent.getCardEstimate());
+            System.out.println("Card Item -> Title : " + cardItemKey.getCardTitle() +
+                    " -> Description : " + cardItemContent.getCardDescription() +
+                    " -> Estimate : " + cardItemContent.getCardEstimate());
         }
     }
 }

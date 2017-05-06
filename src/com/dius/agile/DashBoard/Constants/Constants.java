@@ -1,8 +1,9 @@
-package com.dius.agile.AgileDashBoard.IterationConstants;
-
 /**
  * Created by Naresh Siramsetty on 5/5/17.
  */
+
+package com.dius.agile.DashBoard.Constants;
+
 public class Constants {
 
     private Constants(){};

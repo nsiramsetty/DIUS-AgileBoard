@@ -2,7 +2,7 @@
  * Created by Naresh Siramsetty on 5/5/17.
  */
 
-package com.dius.agile.AgileDashBoard.AgileColumns;
+package com.dius.agile.DashBoard.Columns;
 
 public class ColumnKey {
     private String columnName;

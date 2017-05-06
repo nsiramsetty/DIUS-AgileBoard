@@ -2,13 +2,13 @@
  * Created by Naresh Siramsetty on 5/5/17.
  */
 
-package com.dius.agile.AgileDashBoard.Exceptions;
+package com.dius.agile.DashBoard.Exceptions;
 
-import com.dius.agile.AgileDashBoard.AgileCardItem.CardItem;
+import com.dius.agile.DashBoard.CardItem.CardItem;
 
-public class CardNotFoundException extends Exception {
+public class CardAlreadyExistsException extends Exception {
 
-    public CardNotFoundException(CardItem cardItem, String columnName) {
+    public CardAlreadyExistsException(CardItem cardItem, String columnName) {
         this.cardItem = cardItem;
         this.columnName = columnName;
     }
@@ -35,7 +35,7 @@ public class CardNotFoundException extends Exception {
 
     @Override
     public void printStackTrace() {
-        System.out.println("Card Item with Title \"" +
-                cardItem.getCardTitle() + "\" not found in this column \"" + columnName + "\"");
+        System.out.println("Exception : Card Item with Title \""
+                + cardItem.getCardTitle() + "\" already exists in this column \"" + columnName + "\"");
     }
 }

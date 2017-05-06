@@ -1,10 +1,11 @@
-package com.dius.agile.AgileDashBoard.LastAction;
-
-import com.dius.agile.AgileDashBoard.AgileCardItem.CardItem;
-
 /**
  * Created by Naresh Siramsetty on 5/5/17.
  */
+
+package com.dius.agile.DashBoard.Action;
+
+import com.dius.agile.DashBoard.CardItem.CardItem;
+
 public class Action {
     private CardItem cardItem;
     private String fromColumnName;

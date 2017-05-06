@@ -2,10 +2,10 @@
  * Created by Naresh Siramsetty on 5/5/17.
  */
 
-package com.dius.agile.AgileDashBoard.Exceptions;
+package com.dius.agile.DashBoard.Exceptions;
 
-import com.dius.agile.AgileDashBoard.AgileCardItem.CardItem;
-import com.dius.agile.AgileDashBoard.IterationConstants.Constants;
+import com.dius.agile.DashBoard.CardItem.CardItem;
+import com.dius.agile.DashBoard.Constants.Constants;
 
 public class WIPExceededException extends Exception {
 
@@ -47,9 +47,9 @@ public class WIPExceededException extends Exception {
 
     @Override
     public void printStackTrace() {
-        System.out.println("Column WIP exceeded the Limit : "
+        System.out.println("Exception : Column WIP exceeded the Limit : "
                 + Constants.WIP_LIMIT + ". Unable to add Card Item with Title \""
-                + cardItem.getCardTitle() + "\" and Estimate \""
+                + cardItem.getCardTitle() + "\"\n and Estimate \""
                 + cardItem.getCardEstimate() + "\" to Column \""
                 + columnName + "\" with an existing total Estimate of \""
                 + (pointsCount - cardItem.getCardEstimate()) + "\"");

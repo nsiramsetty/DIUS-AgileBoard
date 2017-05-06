@@ -1,8 +1,9 @@
-package com.dius.agile.AgileDashBoard.AgileCardItem;
-
 /**
  * Created by Naresh Siramsetty on 5/5/17.
  */
+
+package com.dius.agile.DashBoard.CardItem;
+
 public class CardItem {
 
     private String cardTitle;
